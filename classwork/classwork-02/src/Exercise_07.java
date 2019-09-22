@@ -1,5 +1,3 @@
-package dev.beriashvili.classwork;
-
 import java.util.Scanner;
 
 public class Exercise_07 {

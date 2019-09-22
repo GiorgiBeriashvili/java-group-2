@@ -1,15 +1,13 @@
-package dev.beriashvili.classwork;
-
 import java.util.Scanner;
 
-public class Exercise_05 {
+public class Exercise_06 {
     /*
-     * შეიტანეთ ოთხნიშნა მთელი რიცხვი, დაბეჭდეთ რიცხვის ციფრთა ჯამი.
+     * შეიტანეთ ნებისმიერი მთელი რიცხვი, დაბეჭდეთ რიცხვის ციფრთა ჯამი.
      * */
     public static void main() {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Enter a four-digit integer: ");
+        System.out.print("Enter an integer: ");
         int integer = scanner.nextInt();
 
         if (integer < 0) {

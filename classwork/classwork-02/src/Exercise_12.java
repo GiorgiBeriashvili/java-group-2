@@ -1,5 +1,3 @@
-package dev.beriashvili.classwork;
-
 import java.util.Arrays;
 import java.util.Random;
 

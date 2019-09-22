@@ -1,7 +1,3 @@
-package dev.beriashvili.classwork;
-
-import java.util.Arrays;
-
 public class Exercise_09 {
     /*
      * განსაზღვრეთ 8 ელემენტიანი ნამდვილ რიცხვთა მასივი, დაბეჭდეთ მასივის ელემენტები, მასივის უდიდესი და უმცირესი ელემენტი.

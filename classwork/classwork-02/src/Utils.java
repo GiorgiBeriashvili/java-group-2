@@ -1,5 +1,3 @@
-package dev.beriashvili.classwork;
-
 public class Utils {
     public static void main() {
 //        Exercise_01.main();
