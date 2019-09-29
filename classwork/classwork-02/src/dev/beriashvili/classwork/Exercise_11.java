@@ -1,3 +1,5 @@
+package dev.beriashvili.classwork;
+
 import java.util.Arrays;
 
 public class Exercise_11 {

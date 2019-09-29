@@ -1,3 +1,5 @@
+package dev.beriashvili.practice;
+
 public class Person {
     String firstName;
     public String lastName;

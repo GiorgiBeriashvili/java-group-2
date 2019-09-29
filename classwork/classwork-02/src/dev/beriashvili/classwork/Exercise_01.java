@@ -1,3 +1,5 @@
+package dev.beriashvili.classwork;
+
 public class Exercise_01 {
     /*
      * გამოიტანეთ დაპროგრამების ენების სახელები ცალ–ცალკე ხაზზე( C++, C#, java, pascal, php, JavaScript, ActionScript).
