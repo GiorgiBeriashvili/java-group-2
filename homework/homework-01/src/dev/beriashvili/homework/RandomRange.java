@@ -30,7 +30,7 @@ class RandomRange {
         int[] randomIntegers = new int[length];
         Random random = new Random();
 
-        for (int index = 0; index < length; index++) {
+        for (int index = 0; index < randomIntegers.length; index++) {
             int randomInteger = random.nextInt(max - min + 1) + min;
             randomIntegers[index] = randomInteger;
         }
