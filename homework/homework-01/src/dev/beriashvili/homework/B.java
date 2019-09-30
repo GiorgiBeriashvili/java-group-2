@@ -18,7 +18,7 @@ class B extends A {
 
     int y;
 
-    void setY() {
+    void setData() {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter the value of y: ");

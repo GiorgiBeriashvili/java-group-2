@@ -9,12 +9,12 @@ class Utils {
         c.getSum();
 
         A a = new A();
-        a.setX();
+        a.setData();
         a.plusTwelve();
         System.out.println(String.format("It is %b to state that %d is an even number.", a.isEven(), A.x));
 
         B b = new B();
-        b.setY();
+        b.setData();
         System.out.println(String.format("%d + %d = %d", A.x, b.y, b.getSum()));
 
         RandomRange randomRange = new RandomRange();

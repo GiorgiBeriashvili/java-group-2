@@ -21,7 +21,7 @@ public class Exercise_12 {
         System.out.println(Arrays.toString(integers));
     }
 
-    private static void descendingSelectionSort(int array[]) {
+    private static void descendingSelectionSort(int[] array) {
         for (int element = 0; element < array.length - 1; element++) {
             int minimumElement = element;
 

@@ -1,11 +1,11 @@
 package dev.beriashvili.practice;
 
-public class Person {
+class Person {
     String firstName;
-    public String lastName;
-    private int age;
+    String lastName;
+    int age;
 
-    public void printData() {
-        System.out.println(String.format("%s %s", this.firstName, this.lastName));
+    void printData() {
+        System.out.println(String.format("%s %s is %d years old.", this.firstName, this.lastName, this.age));
     }
 }

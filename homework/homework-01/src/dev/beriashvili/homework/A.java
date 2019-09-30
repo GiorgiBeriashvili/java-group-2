@@ -22,7 +22,7 @@ class A {
         System.out.println("Hello");
     }
 
-    void setX() {
+    void setData() {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter the value of x: ");

@@ -5,6 +5,7 @@ public class Main {
         Person person = new Person();
         person.firstName = "Giorgi";
         person.lastName = "Beriashvili";
+        person.age = 20;
         person.printData();
     }
 }
