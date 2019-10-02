@@ -26,12 +26,12 @@ class RandomRange {
         b = scanner.nextInt();
     }
 
-    private int[] getRandomIntegers(int length, int min, int max) {
+    private int[] getRandomIntegers(int length, int minimum, int maximum) {
         int[] randomIntegers = new int[length];
         Random random = new Random();
 
         for (int index = 0; index < randomIntegers.length; index++) {
-            int randomInteger = random.nextInt(max - min + 1) + min;
+            int randomInteger = random.nextInt(maximum - minimum + 1) + minimum;
             randomIntegers[index] = randomInteger;
         }
 
