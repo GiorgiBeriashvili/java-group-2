@@ -5,8 +5,8 @@ class Utils {
         C c = new C();
         c.setData();
         System.out.println(String.format("The sum of the digits of the integer %d is: %d", c.c, c.getDigitSum()));
-        c.getProduct();
-        c.getSum();
+        c.printProduct();
+        c.printSum();
 
         A a = new A();
         a.setData();

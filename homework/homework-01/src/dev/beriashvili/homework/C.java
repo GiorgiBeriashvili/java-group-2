@@ -56,11 +56,11 @@ class C {
         return digitSum;
     }
 
-    void getProduct() {
+    void printProduct() {
         System.out.println(String.format("%d * %d = %d", getLastDigit(), getFirstDigit(), getLastDigit() * getFirstDigit()));
     }
 
-    void getSum() {
+    void printSum() {
         System.out.println(String.format("%d + %d = %d", getFirstDigit(), getLastDigit() * getFirstDigit(), getFirstDigit() + getLastDigit() * getFirstDigit()));
     }
 }
