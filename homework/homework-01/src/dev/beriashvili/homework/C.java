@@ -32,10 +32,14 @@ class C {
     }
 
     private int getLastDigit() {
+        a = Math.abs(a);
+
         return a % 10;
     }
 
     private int getFirstDigit() {
+        b = Math.abs(b);
+
         while (b >= 10) {
             b /= 10;
         }
