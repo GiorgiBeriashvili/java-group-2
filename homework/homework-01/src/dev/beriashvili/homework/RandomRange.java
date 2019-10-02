@@ -89,9 +89,9 @@ class RandomRange {
     void main() {
         setData();
 
-        int min = Math.min(a, b);
-        int max = Math.max(a, b);
-        int[] fortyRandomIntegers = getRandomIntegers(40, min, max);
+        int minimum = Math.min(a, b);
+        int maximum = Math.max(a, b);
+        int[] fortyRandomIntegers = getRandomIntegers(40, minimum, maximum);
 
         System.out.println(String.format("Forty random integers: %s", Arrays.toString(fortyRandomIntegers)));
 
@@ -103,9 +103,9 @@ class RandomRange {
         printParitySum("even", evenIntSum);
         printParitySum("odd", oddIntSum);
 
-        min = Math.min(evenIntSum, oddIntSum);
-        max = Math.max(evenIntSum, oddIntSum);
-        int[] fiveRandomIntegers = getRandomIntegers(5, min, max);
+        minimum = Math.min(evenIntSum, oddIntSum);
+        maximum = Math.max(evenIntSum, oddIntSum);
+        int[] fiveRandomIntegers = getRandomIntegers(5, minimum, maximum);
 
         System.out.println(String.format("Five random integers: %s", Arrays.toString(fiveRandomIntegers)));
     }
