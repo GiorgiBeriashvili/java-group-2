@@ -33,7 +33,11 @@ class A {
         System.out.println(String.format("%d + %d = %d", x, 12, x + 12));
     }
 
-    boolean isEven() {
-        return (x & 1) == 0;
+    String isEvenOrOdd() {
+        if ((x & 1) == 0) {
+            return String.format("%d is an even number.", x);
+        } else {
+            return String.format("%d is an odd number.", x);
+        }
     }
 }

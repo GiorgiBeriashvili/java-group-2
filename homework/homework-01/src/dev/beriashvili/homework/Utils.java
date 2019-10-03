@@ -11,7 +11,7 @@ class Utils {
         A a = new A();
         a.setData();
         a.plusTwelve();
-        System.out.println(String.format("It is %b to state that %d is an even number.", a.isEven(), A.x));
+        System.out.println(a.isEvenOrOdd());
 
         B b = new B();
         b.setData();

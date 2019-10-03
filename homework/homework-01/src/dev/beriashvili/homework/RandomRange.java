@@ -39,22 +39,22 @@ class RandomRange {
     }
 
     private int getParityCount(int[] array, int parity) {
-        int count = 0;
+        int parityCount = 0;
 
         for (int element : array) {
             if ((element & 1) == parity) {
-                count++;
+                parityCount++;
             }
         }
 
-        return count;
+        return parityCount;
     }
 
-    private int getEvenIntCount(int[] array) {
+    private int getEvenIntegerCount(int[] array) {
         return getParityCount(array, 0);
     }
 
-    private int getOddIntCount(int[] array) {
+    private int getOddIntegerCount(int[] array) {
         return getParityCount(array, 1);
     }
 
@@ -63,22 +63,22 @@ class RandomRange {
     }
 
     private int getParitySum(int[] array, int parity) {
-        int sum = 0;
+        int paritySum = 0;
 
         for (int element : array) {
             if ((element & 1) == parity) {
-                sum += element;
+                paritySum += element;
             }
         }
 
-        return sum;
+        return paritySum;
     }
 
-    private int getEvenIntSum(int[] array) {
+    private int getEvenIntegerSum(int[] array) {
         return getParitySum(array, 0);
     }
 
-    private int getOddIntSum(int[] array) {
+    private int getOddIntegerSum(int[] array) {
         return getParitySum(array, 1);
     }
 
@@ -95,16 +95,16 @@ class RandomRange {
 
         System.out.println(String.format("Forty random integers: %s", Arrays.toString(fortyRandomIntegers)));
 
-        printParityCount("even", getEvenIntCount(fortyRandomIntegers));
-        printParityCount("odd", getOddIntCount(fortyRandomIntegers));
+        printParityCount("even", getEvenIntegerCount(fortyRandomIntegers));
+        printParityCount("odd", getOddIntegerCount(fortyRandomIntegers));
 
-        int evenIntSum = getEvenIntSum(fortyRandomIntegers), oddIntSum = getOddIntSum(fortyRandomIntegers);
+        int evenIntegerSum = getEvenIntegerSum(fortyRandomIntegers), oddIntegerSum = getOddIntegerSum(fortyRandomIntegers);
 
-        printParitySum("even", evenIntSum);
-        printParitySum("odd", oddIntSum);
+        printParitySum("even", evenIntegerSum);
+        printParitySum("odd", oddIntegerSum);
 
-        minimum = Math.min(evenIntSum, oddIntSum);
-        maximum = Math.max(evenIntSum, oddIntSum);
+        minimum = Math.min(evenIntegerSum, oddIntegerSum);
+        maximum = Math.max(evenIntegerSum, oddIntegerSum);
         int[] fiveRandomIntegers = getRandomIntegers(5, minimum, maximum);
 
         System.out.println(String.format("Five random integers: %s", Arrays.toString(fiveRandomIntegers)));
