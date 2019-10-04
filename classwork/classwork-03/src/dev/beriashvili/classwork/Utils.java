@@ -13,5 +13,17 @@ class Utils {
 
         dev.beriashvili.classwork.constructors.Main constructors = new dev.beriashvili.classwork.constructors.Main();
         constructors.main();
+
+        dev.beriashvili.classwork.inheritance.exercise_01.Main inheritanceOne = new dev.beriashvili.classwork.inheritance.exercise_01.Main();
+        inheritanceOne.main();
+
+        dev.beriashvili.classwork.inheritance.exercise_02.Main inheritanceTwo = new dev.beriashvili.classwork.inheritance.exercise_02.Main();
+        inheritanceTwo.main();
+
+        dev.beriashvili.classwork.inheritance.exercise_03.Main inheritanceThree = new dev.beriashvili.classwork.inheritance.exercise_03.Main();
+        inheritanceThree.main();
+
+        dev.beriashvili.classwork.inheritance.exercise_04.Main inheritanceFour = new dev.beriashvili.classwork.inheritance.exercise_04.Main();
+        inheritanceFour.main();
     }
 }
