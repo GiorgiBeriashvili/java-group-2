@@ -4,12 +4,15 @@ import java.io.File;
 
 class Utils {
     static void main(String directoryPath, String fileName, int precision) {
+        // 1.
         MathematicalFunction mathematicalFunction = new MathematicalFunction();
         mathematicalFunction.main(directoryPath, fileName, precision);
 
-        ParseData parseData = new ParseData();
-        parseData.main(directoryPath, fileName, precision);
+        // 2.
+        FileParser fileParser = new FileParser();
+        fileParser.main(directoryPath, fileName, precision);
 
+        // 3.
         NumericalOperations numericalOperations = new NumericalOperations(6, 12);
         numericalOperations.main();
     }

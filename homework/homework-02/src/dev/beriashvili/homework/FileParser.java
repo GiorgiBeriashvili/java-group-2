@@ -5,7 +5,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
-class ParseData {
+class FileParser {
     /*
      * 2. დაწერეთ პროგრამა, რომელიც function.txt ფაილიდან (იხილეთ ამოცანა 1)
      *    წაიკითხავს მონაცემებს და დაბეჭდავს მნიშვნელობებს შორის მინიმალურს და
