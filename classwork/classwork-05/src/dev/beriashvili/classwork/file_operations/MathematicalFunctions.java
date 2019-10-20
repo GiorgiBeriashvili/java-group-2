@@ -34,12 +34,12 @@ public class MathematicalFunctions {
         try {
             FileWriter fileWriter = new FileWriter(file, true);
 
-            fileWriter.write("The function: y = x^3 + e^x\n");
+            fileWriter.write("f(x) = x^3 + e^x\n\n");
 
             for (x = minimumBound; x <= maximumBound + 0.01; x += 0.01) {
                 y = Math.pow(x, 3) + Math.pow(e, x);
 
-                fileWriter.write(String.format("y = x^3 + e^x (where x = %.2f) = %f\n", x, y));
+                fileWriter.write(String.format("f(%.2f) = %f\n", x, y));
             }
 
             fileWriter.close();
@@ -62,12 +62,12 @@ public class MathematicalFunctions {
         try {
             FileWriter fileWriter = new FileWriter(file, true);
 
-            fileWriter.write("The function: y = sin(x) + e^x + 1\n");
+            fileWriter.write("f(x) = sin(x) + e^x + 1\n\n");
 
             for (x = minimumBound; x <= maximumBound + 0.01; x += 0.01) {
                 y = Math.sin(x) + Math.pow(e, x) + 1;
 
-                fileWriter.write(String.format("y = sin(x) + e^x + 1 (where x = %.2f) = %f\n", x, y));
+                fileWriter.write(String.format("f(%.2f) = %f\n", x, y));
             }
 
             fileWriter.close();
