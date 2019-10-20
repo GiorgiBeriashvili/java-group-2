@@ -10,13 +10,9 @@ public class ComplexPercentage implements Calculator {
      * დანარჩენი სამი სიდიდის მიხედვით გამოთვალეთ მეოთხე.
      * */
     @Override
-    public String getPercentage(double initialCapital, int yearsPassed, double closingCapital) {
-        if (initialCapital < closingCapital) {
-            return String.format("After %d years, initial capital of %.0f has risen to %.0f with a %.0f%% increase!", yearsPassed, initialCapital, closingCapital, Math.round(closingCapital - initialCapital) / initialCapital * 100);
-        } else if (initialCapital > closingCapital) {
-            return String.format("After %d years, initial capital of %.0f has fallen to %.0f with a %.0f%% decrease!", yearsPassed, initialCapital, closingCapital, Math.round(initialCapital - closingCapital) / closingCapital * 100);
-        } else {
-            return String.format("After %d years, initial capital of %.0f has remained the same.", yearsPassed, initialCapital);
-        }
+    public String getPercentage(double initialCapital, double yearsPassed, double closingCapital) {
+        double complexPercentage = ((Math.pow(closingCapital / initialCapital, 1 / yearsPassed) - 1) * 100);
+
+        return String.format("Complex percentage from initial capital of %.2f, %.2f passed years and closing capital of %.2f: %.2f%%", initialCapital, yearsPassed, closingCapital, complexPercentage);
     }
 }
