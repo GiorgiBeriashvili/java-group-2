@@ -118,20 +118,20 @@ public class NumericalOperations implements Operations {
             }
         }
 
-        ArrayList<Integer> extrema = new ArrayList<>();
+        ArrayList<Integer> maxima = new ArrayList<>();
 
         int frequencyCount = 0;
 
         for (int index = 0; index < frequencies.length; index++) {
             if (frequencies[index] == maximumFrequency) {
-                extrema.add(index);
+                maxima.add(index);
 
                 frequencyCount++;
             }
         }
 
         if (frequencyCount > 1) {
-            return String.format("The most frequent digits of the integer %d are: %s.", preservedInteger, extrema.toString());
+            return String.format("The most frequent digits of the integer %d are: %s.", preservedInteger, maxima.toString());
         } else {
             return String.format("The most frequent digit of b (%d) is: %d", preservedInteger, theMostFrequentDigit);
         }
