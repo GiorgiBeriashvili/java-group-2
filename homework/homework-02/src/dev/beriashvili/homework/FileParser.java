@@ -48,34 +48,34 @@ class FileParser {
         return data;
     }
 
-    private double iterateOverArray(double[] data, boolean isMinimum, double extrema) {
+    private double iterateOverArray(double[] data, boolean isMinimum, double extremum) {
         if (isMinimum) {
             for (double datum : data) {
-                if (datum < extrema) {
-                    extrema = datum;
+                if (datum < extremum) {
+                    extremum = datum;
                 }
             }
         } else {
             for (double datum : data) {
-                if (datum > extrema) {
-                    extrema = datum;
+                if (datum > extremum) {
+                    extremum = datum;
                 }
             }
         }
 
-        return extrema;
+        return extremum;
     }
 
     private double findMinimumOrMaximum(double[] data, boolean isMinimum) {
-        double extrema;
+        double extremum;
 
         if (isMinimum) {
-            extrema = iterateOverArray(data, true, Double.MAX_VALUE);
+            extremum = iterateOverArray(data, true, Double.MAX_VALUE);
         } else {
-            extrema = iterateOverArray(data, false, Double.MIN_VALUE);
+            extremum = iterateOverArray(data, false, Double.MIN_VALUE);
         }
 
-        return extrema;
+        return extremum;
     }
 
     private double getMinimumElement(double[] data) {
