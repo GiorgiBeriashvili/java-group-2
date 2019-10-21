@@ -9,18 +9,6 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class FileWriterOperations implements Operations {
-    public void main() {
-        writePredeterminedIntegersToFile(new int[]{24, 39, -90}, "data.txt", false);
-        writeIntegersFromRangeToFile(0, 100, "data1.txt", true);
-        writeStringIntoMultipleFiles(1, 30, false);
-        writeIndexedStringIntoMultipleFiles(1, 30, false);
-        writeRandomIntegersToFile(100, "data2.txt", true);
-        writeRandomRealNumbersToFile(50, "data3.txt", true);
-        writeIntegersIntoMultipleFiles(1, 10_000, false);
-        writeToTwoSeparateFilesUsingInterestingOperations("numbers.txt", "numbers2.txt", 40, true);
-        writeMatrixToFile("info.txt", true);
-    }
-
     static File getDirectory(String directoryPath) {
         File directory = new File(directoryPath);
 
@@ -35,6 +23,18 @@ public class FileWriterOperations implements Operations {
         }
 
         return directory;
+    }
+
+    public void main() {
+        writePredeterminedIntegersToFile(new int[]{24, 39, -90}, "data.txt", false);
+        writeIntegersFromRangeToFile(0, 100, "data1.txt", true);
+        writeStringIntoMultipleFiles(1, 30, false);
+        writeIndexedStringIntoMultipleFiles(1, 30, false);
+        writeRandomIntegersToFile(100, "data2.txt", true);
+        writeRandomRealNumbersToFile(50, "data3.txt", true);
+        writeIntegersIntoMultipleFiles(1, 10_000, false);
+        writeToTwoSeparateFilesUsingInterestingOperations("numbers.txt", "numbers2.txt", 40, true);
+        writeMatrixToFile("info.txt", true);
     }
 
     /*
@@ -380,6 +380,7 @@ public class FileWriterOperations implements Operations {
 
         int[][] matrix = new int[m][n];
 
+        int zerosCount = 0;
         int onesCount = 0;
 
         Random random = new Random();
@@ -395,7 +396,7 @@ public class FileWriterOperations implements Operations {
         }
 
         try {
-            BufferedWriter fileWriter = new BufferedWriter(new FileWriter(file, append));
+            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file, append));
 
             for (int row = 0; row < matrix.length; row++) {
                 for (int column = 0; column < matrix[row].length; column++) {
@@ -403,25 +404,28 @@ public class FileWriterOperations implements Operations {
 
                     matrix[row][column] = randomValue;
 
-                    if (randomValue == 1) {
+                    if (randomValue == 0) {
+                        zerosCount++;
+                    } else if (randomValue == 1) {
                         onesCount++;
                     }
 
                     if (column == matrix[row].length - 1) {
-                        fileWriter.write(String.valueOf(matrix[row][column]));
+                        bufferedWriter.write(String.valueOf(matrix[row][column]));
                     } else {
-                        fileWriter.write(matrix[row][column] + " ");
+                        bufferedWriter.write(matrix[row][column] + " ");
                     }
                 }
 
-                fileWriter.newLine();
+                bufferedWriter.newLine();
             }
 
-            fileWriter.close();
+            bufferedWriter.close();
         } catch (IOException error) {
             error.printStackTrace();
         }
 
+        System.out.println(String.format("There are %d zeros in the matrix.", zerosCount));
         System.out.println(String.format("There are %d ones in the matrix.", onesCount));
     }
 }
