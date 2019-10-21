@@ -30,7 +30,7 @@ class MathematicalFunction {
 
             bufferedWriter.write("f(x) = x^2 + 2x + 3\n\n");
 
-            for (double iteration = minimumBound; iteration <= maximumBound + iterationStep; iteration += iterationStep) {
+            for (double iteration = minimumBound; iteration < maximumBound + iterationStep; iteration += iterationStep) {
                 bufferedWriter.write(String.format("f(%.2f) = %.4f\n", iteration, getFunctionOutput(iteration)));
             }
 
