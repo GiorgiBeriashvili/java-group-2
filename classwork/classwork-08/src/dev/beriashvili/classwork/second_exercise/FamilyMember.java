@@ -47,10 +47,21 @@ public class FamilyMember {
      * შემთხვევაში თუ money ველში მოთხოვნილ თანხაზე მეტი თანხაა.
      * */
     public int requestFamilyBudget(FamilyBudget familyBudget, int requestedAmount) {
-        if (requestedAmount < familyBudget.getBudget()) {
-            return familyBudget.getBudget();
-        }
+        if (requestedAmount > 0) {
+            if (requestedAmount <= familyBudget.getBudget()) {
+                familyBudget.money -= requestedAmount;
+                familyBudget.saveBudgetState(familyBudget.money);
 
-        return 0;
+                return familyBudget.getBudget();
+            } else {
+                System.out.println("Cannot request budget above available budget (returning -1).");
+
+                return -1;
+            }
+        } else {
+            System.out.println("Cannot request budget below 0 (returning -1).");
+
+            return -1;
+        }
     }
 }

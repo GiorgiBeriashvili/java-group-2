@@ -11,7 +11,7 @@ public class FamilyBudget implements BudgetController {
      * რომლებიც საშუალებას იძლევა money ცვლადში მნიშვნელობის მინიჭების, შეცვლის, მიღე-
      * ბის.
      * */
-    private int money = 0;
+    int money = 0;
 
     public void main() {
         // Starting budget
@@ -91,7 +91,7 @@ public class FamilyBudget implements BudgetController {
      * დაწერეთ მეთოდი, რომელიც budget.txt ფაილში შეინახავს მოთხოვნი FamilyBudget-ის
      * money თვისების მდგომარეობას, ყოველი მისი ცვლილების დროს.
      * */
-    private void saveBudgetState(int budget) {
+    void saveBudgetState(int budget) {
         try {
             BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("budget.txt", false));
 
