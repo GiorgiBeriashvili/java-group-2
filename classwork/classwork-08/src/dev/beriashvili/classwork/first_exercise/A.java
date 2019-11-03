@@ -99,5 +99,7 @@ public class A implements MainInterface {
                 System.out.print(String.format("%d ", evenInteger));
             }
         }
+
+        System.out.println();
     }
 }

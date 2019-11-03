@@ -14,6 +14,6 @@ class Utils {
 
         FamilyMember familyMember = new FamilyMember("Giorgi", "Beriashvili", 20, "Student");
         familyMember.writeFieldsToFile();
-        System.out.println(String.format("Getting family's budget: %d", familyMember.getFamilyBudget(familyBudget, 10_000)));
+        System.out.println(String.format("Result of requested budget: %d", familyMember.requestFamilyBudget(familyBudget, 10_000)));
     }
 }

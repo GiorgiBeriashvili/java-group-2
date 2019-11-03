@@ -46,11 +46,11 @@ public class FamilyMember {
      * FamilyBudget ტიპის ობიექტს და მოსთხოვოს თანხა, თანხის მიღება განხორციელდება იმ
      * შემთხვევაში თუ money ველში მოთხოვნილ თანხაზე მეტი თანხაა.
      * */
-    public int getFamilyBudget(FamilyBudget familyBudget, int requestedAmount) {
-        if (requestedAmount > familyBudget.getBudget()) {
+    public int requestFamilyBudget(FamilyBudget familyBudget, int requestedAmount) {
+        if (requestedAmount < familyBudget.getBudget()) {
             return familyBudget.getBudget();
         }
 
-        return requestedAmount;
+        return 0;
     }
 }

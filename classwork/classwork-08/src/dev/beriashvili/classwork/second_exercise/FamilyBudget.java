@@ -22,7 +22,7 @@ public class FamilyBudget implements BudgetController {
         System.out.println(String.format("Set budget is: %d", this.money));
 
         // Updating the budget
-        updateBudget(50_000);
+        updateBudget(1_000);
         System.out.println(String.format("Updated budget is: %d", this.money));
 
         // Updating the budget
@@ -42,17 +42,26 @@ public class FamilyBudget implements BudgetController {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Set the budget: ");
-        this.money = scanner.nextInt();
+        int queriedBudget = scanner.nextInt();
 
-        saveBudgetState(this.money);
+        if (queriedBudget < 0) {
+            System.out.println("Cannot set the budget below 0.");
+        } else {
+            this.money = queriedBudget;
+
+            saveBudgetState(this.money);
+        }
     }
 
     // Update the budget
     @Override
     public void updateBudget(int amount) {
-        this.money += amount;
-
-        saveBudgetState(this.money);
+        if (this.money + amount < 0) {
+            System.out.println("Cannot update the budget below 0.");
+        } else {
+            this.money += amount;
+            saveBudgetState(this.money);
+        }
     }
 
     // Get the budget
@@ -69,10 +78,10 @@ public class FamilyBudget implements BudgetController {
      * მდე საშუალო, წინააღმდეგ შემთხვევაში ღარიბი).
      * */
     private String getFamilyBudgetCondition(int budget) {
-        if (budget >= 10_000 && budget <= 40_000) {
-            return "The family seems to be average.";
-        } else if (budget > 40_000) {
+        if (budget > 40_000) {
             return "The family seems to be rich.";
+        } else if (budget > 10_000) {
+            return "The family seems to be average.";
         } else {
             return "The family seems to be poor.";
         }
@@ -86,7 +95,7 @@ public class FamilyBudget implements BudgetController {
         try {
             BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("budget.txt", false));
 
-            bufferedWriter.write(String.valueOf(budget));
+            bufferedWriter.write(String.format("Current budget: %d\n", budget));
 
             bufferedWriter.close();
         } catch (IOException error) {
