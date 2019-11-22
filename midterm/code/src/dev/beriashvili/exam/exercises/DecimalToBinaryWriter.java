@@ -7,6 +7,11 @@ import java.util.Scanner;
 import java.util.Stack;
 
 public class DecimalToBinaryWriter {
+    /*
+     * დაწერეთ პროგრამა, რომელიც კლავიატურიდან შეტანილ
+     * ათობით რიცხვს გადაიყვანს ორობითში და ჩაწერს
+     * number.txt ფაილში.
+     * */
     private int decimal;
     private String binary;
 
