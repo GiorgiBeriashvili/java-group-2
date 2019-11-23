@@ -154,30 +154,19 @@ class Exercises {
      * ინდექსიანი ელემენტები. დაბეჭდეთ თავდაპირველი და მიღებული კოლექცია.
      * */
     void exerciseTen() {
-        ArrayList<Integer> integerArrayList = new ArrayList<>();
-        Integer[] evenIndexArray;
+        LinkedList<Integer> integerLinkedList = new LinkedList<>();
 
-        Utils.addRandomIntegers(integerArrayList, 5);
-        Utils.printList(integerArrayList);
-
-        if ((integerArrayList.size() & 1) == 1) {
-            evenIndexArray = new Integer[(integerArrayList.size() / 2) + 1];
-        } else {
-            evenIndexArray = new Integer[integerArrayList.size() / 2];
+        for (int index = 0; index < 5; index++) {
+            integerLinkedList.add(ThreadLocalRandom.current().nextInt(Integer.MIN_VALUE, Integer.MAX_VALUE));
         }
 
-        int currentIndex = 0;
+        Utils.printList(integerLinkedList);
 
-        for (int index = 0; index < integerArrayList.size(); index++) {
-            if ((index & 1) != 1) {
-                evenIndexArray[currentIndex] = integerArrayList.get(index);
-
-                currentIndex++;
-            }
+        for (int index = 0, size = integerLinkedList.size(); index < size; index++, size--) {
+            integerLinkedList.remove(index);
         }
 
-        integerArrayList.removeAll(Arrays.asList(evenIndexArray));
-        Utils.printList(integerArrayList);
+        Utils.printList(integerLinkedList);
     }
 
     /*
