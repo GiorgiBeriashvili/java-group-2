@@ -45,7 +45,7 @@ public class TextGenerator {
     String text;
 
     static void introduction() {
-        System.out.println("Welcome to the text generator. Please read the instructions below.\n");
+        System.out.println("This program serves as a text generator. Please read the instructions below.\n");
 
         System.out.println(String.format("Valid languages - %s", Arrays.toString(LanguageHandler.validLanguages)));
         System.out.println(String.format("The default language is: %s\n", LanguageHandler.defaultLanguage));
@@ -53,11 +53,13 @@ public class TextGenerator {
         System.out.println("An example of valid parameters - p-d-d-s-d-d-w-d-d-c-d-d");
         System.out.println("p = paragraph range; s = sentence range; w = word range; c = character range");
         System.out.println("d = decimal, - the minimum and the maximum range is based on these values");
-        System.out.println(String.format("The default parameter set is: %s\n", ParameterHandler.defaultParameters));
+        System.out.println(String.format("The default parameters: %s\n", ParameterHandler.defaultParameters));
 
         System.out.println("Valid parameters are determined after being pattern matched via the following regular expressions:");
         ParameterHandler.validators.forEach((key, value) -> System.out.println(String.format("%s layer: %s", key, value)));
-        System.out.println("\nBy default, - only the first layer results in pseudo random parameters.\n");
+        System.out.println("\nTo summarize, - only the quantity of the provided numeric values are taken into the account.");
+        System.out.println("Thus, per available pattern matchers, provide either: 8, 4, 2 or 1 separate numeric values in any form you desire.");
+        System.out.println("If pattern matchers fail to identify valid parameters, - the default parameters are parsed instead.\n");
     }
 
     public void main() {

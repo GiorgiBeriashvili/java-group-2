@@ -28,18 +28,17 @@ public class ParameterHandler {
     static final String defaultParameters = String.format("p-%1$d-%2$d-s-%1$d-%2$d-w-%1$d-%2$d-c-%1$d-%2$d", defaultMinimumBound, defaultMaximumBound);
 
     static final LinkedHashMap<Layer, String> validators = new LinkedHashMap<>() {{
-        put(Layer.First, "^p\\D+\\d+-\\d+\\D+s\\D+\\d+-\\d+\\D+w\\D+\\d+-\\d+\\D+c\\D+\\d+-\\d+\\D*$");
+        put(Layer.First, "^\\D*\\d+\\D+\\d+\\D+\\d+\\D+\\d+\\D+\\d+\\D+\\d+\\D+\\d+\\D+\\d+\\D*$");
         put(Layer.Second, "^\\D*\\d+\\D+\\d+\\D+\\d+\\D+\\d+\\D*$");
         put(Layer.Third, "^\\D*\\d+\\D+\\d+\\D*$");
         put(Layer.Fourth, "^\\D*\\d+\\D*$");
     }};
 
+    static ArrayList<Integer> parsedParameters;
     static Layer currentLayer = Layer.First;
 
     public static String validateParameters(String parameters) {
         boolean isValid = false;
-
-        parameters = parameters.toLowerCase();
 
         for (HashMap.Entry<Layer, String> entry : validators.entrySet()) {
             Layer layer = entry.getKey();
@@ -62,18 +61,19 @@ public class ParameterHandler {
     }
 
     public static ArrayList<Integer> parseParameters(String parameters, Layer layer) {
-        ArrayList<Integer> parsedParameters = new ArrayList<>();
+        parsedParameters = new ArrayList<>();
 
         /*
          * In these conditional statements, the current layer is examined to determine the pattern to parse the parameters
          * After the examination, program handles the parameters appropriately and adds them to the parsed parameters list
          * */
         if (layer == Layer.First) {
-            String[] splitParameters = parameters.split("-");
+            Pattern pattern = Pattern.compile("\\d+");
+            Matcher matcher = pattern.matcher(parameters);
 
-            for (String splitParameter : splitParameters) {
+            while (matcher.find()) {
                 try {
-                    parsedParameters.add(Integer.parseInt(splitParameter));
+                    parsedParameters.add(Integer.parseInt(matcher.group()));
                 } catch (Exception error) {
                     assert true;
                 }
@@ -84,7 +84,8 @@ public class ParameterHandler {
 
             while (matcher.find()) {
                 try {
-                    for (int index = 0; index < 2; index++) {
+                    for (int index = 0; index < 1; index++) {
+                        parsedParameters.add(1);
                         parsedParameters.add(Integer.parseInt(matcher.group()));
                     }
                 } catch (Exception error) {
@@ -120,7 +121,8 @@ public class ParameterHandler {
 
             while (matcher.find()) {
                 try {
-                    for (int index = 0; index < 8; index++) {
+                    for (int index = 0; index < 4; index++) {
+                        parsedParameters.add(1);
                         parsedParameters.add(Integer.parseInt(matcher.group()));
                     }
                 } catch (Exception error) {
