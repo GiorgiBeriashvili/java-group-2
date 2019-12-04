@@ -23,6 +23,7 @@ enum Layer {
 }
 
 public class ParameterHandler {
+    static boolean isValid;
     static final int defaultMinimumBound = 1;
     static final int defaultMaximumBound = 10;
     static final String defaultParameters = String.format("p-%1$d-%2$d-s-%1$d-%2$d-w-%1$d-%2$d-c-%1$d-%2$d", defaultMinimumBound, defaultMaximumBound);
@@ -38,7 +39,7 @@ public class ParameterHandler {
     static Layer currentLayer = Layer.First;
 
     public static String validateParameters(String parameters) {
-        boolean isValid = false;
+        isValid = false;
 
         for (HashMap.Entry<Layer, String> entry : validators.entrySet()) {
             Layer layer = entry.getKey();
@@ -56,6 +57,7 @@ public class ParameterHandler {
         if (isValid) {
             return parameters;
         } else {
+
             return defaultParameters;
         }
     }

@@ -37,7 +37,7 @@ Let us see how different provided parameters are matched according to the aforem
 
 1. Parameters: `1 6 2 4 4 6 2 5`
 
-    First layer's regular expression's pattern will match these parameters, resulting in the following parsed parameters: `[1, 6, 2, 4, 4, 6, 2, 6]`
+    First layer's regular expression's pattern will match these parameters, resulting in the following parsed parameters: `[1, 6, 2, 4, 4, 6, 2, 5]`
 
     Notice how it was not necessary to write the parameters in the following format due to the first layer's regular expression: `p-d-d-s-d-d-w-d-d-c-d-d`
 

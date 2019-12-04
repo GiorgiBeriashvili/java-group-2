@@ -45,6 +45,7 @@ public class Statistics {
         System.out.println(String.format("Generated sentence count: %d", sentenceCount));
         System.out.println(String.format("Generated paragraph count: %d", paragraphCount));
         System.out.println(String.format("Layer: %s", ParameterHandler.currentLayer));
+        System.out.println(String.format("Parsed the default parameters: %b", !ParameterHandler.isValid));
         System.out.println(String.format("Parsed parameters: %s", ParameterHandler.parsedParameters));
     }
 }
