@@ -14,7 +14,7 @@ An example of valid parameters - `p-d-d-s-d-d-w-d-d-c-d-d`
 - `c` = character range
 - `d` = decimal, - the minimum and the maximum range is based on these values
 
-The default parameters: `p-1-10-s-1-10-w-1-10-c-1-10`
+The default parameters: `p-5-15-s-5-15-w-5-15-c-5-15`
 
 Valid parameters are determined after being pattern matched via the following regular expressions:
 
@@ -59,6 +59,6 @@ Let us see how different provided parameters are matched according to the aforem
 
 5. Parameters: `please generate text for me, thank you`
 
-    All of the layers' regular expressions's patterns will fail to match this input, thus the default parameters `p-1-10-s-1-10-w-1-10-c-1-10` will be pattern matched by the first layer instead.
+    All of the layers' regular expressions's patterns will fail to match this input, thus the default parameters `p-5-15-s-5-15-w-5-15-c-5-15` will be pattern matched by the first layer instead.
 
-    First layer's regular expression's successful pattern matching for the default parameters results in the following parsed parameters: `[1, 10, 1, 10, 1, 10, 1, 10]`
+    First layer's regular expression's successful pattern matching for the default parameters results in the following parsed parameters: `[5, 15, 5, 15, 5, 15, 5, 15]`

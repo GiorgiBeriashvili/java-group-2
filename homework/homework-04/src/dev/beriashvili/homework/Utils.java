@@ -1,6 +1,6 @@
 package dev.beriashvili.homework;
 
-import dev.beriashvili.homework.sentence_generator.TextGenerator;
+import dev.beriashvili.homework.text_generator.TextGenerator;
 
 public class Utils {
     static void main() {

@@ -1,4 +1,4 @@
-package dev.beriashvili.homework.sentence_generator;
+package dev.beriashvili.homework.text_generator;
 
 public class Statistics {
     public int characterCount;
