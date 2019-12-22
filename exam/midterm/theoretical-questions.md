@@ -4,45 +4,45 @@ This file consists of theoretical questions regarding the Java programming langu
 
 ## **Theoretical Questions**
 
-- [**Description**](#description)
-  - [**Theoretical Questions**](#theoretical-questions)
-    - [**1. Define JVM (Java Virtual Machine)**](#1-define-jvm-java-virtual-machine)
-    - [**2. Define JDK (Java Development Kit)**](#2-define-jdk-java-development-kit)
-    - [**3. Define primitive data types**](#3-define-primitive-data-types)
-    - [**4. Compare primitive data types and objects**](#4-compare-primitive-data-types-and-objects)
-    - [**5. Explain why Java is regarded as multiplatform language**](#5-explain-why-java-is-regarded-as-multiplatform-language)
-    - [**6. Define thread**](#6-define-thread)
-    - [**7. Write down the methods of creating a thread in Java**](#7-write-down-the-methods-of-creating-a-thread-in-java)
-    - [**8. Define the lifecycle of a thread**](#8-define-the-lifecycle-of-a-thread)
-    - [**9. Define encapsulation**](#9-define-encapsulation)
-    - [**10. Define inheritance**](#10-define-inheritance)
-    - [**11. Define polymorphism**](#11-define-polymorphism)
-    - [**12. Define stack**](#12-define-stack)
-    - [**13. Define heap**](#13-define-heap)
-    - [**14. Define garbage collection**](#14-define-garbage-collection)
-    - [**15. Define constructor**](#15-define-constructor)
-    - [**16. Compare class methods and class members**](#16-compare-class-methods-and-class-members)
-    - [**17. Define package**](#17-define-package)
-    - [**18. Compare final classes and abstract classes**](#18-compare-final-classes-and-abstract-classes)
-    - [**19. Define exceptions**](#19-define-exceptions)
+- [Description](#description)
+  - [Theoretical Questions](#theoretical-questions)
+    - [1. Define JVM (Java Virtual Machine)](#1-define-jvm-java-virtual-machine)
+    - [2. Define JDK (Java Development Kit)](#2-define-jdk-java-development-kit)
+    - [3. Define primitive data types](#3-define-primitive-data-types)
+    - [4. Compare primitive data types and objects](#4-compare-primitive-data-types-and-objects)
+    - [5. Explain why Java is regarded as cross-platform language](#5-explain-why-java-is-regarded-as-cross-platform-language)
+    - [6. Define thread](#6-define-thread)
+    - [7. Write down the methods of creating a thread in Java](#7-write-down-the-methods-of-creating-a-thread-in-java)
+    - [8. Define the life cycle of a thread](#8-define-the-life-cycle-of-a-thread)
+    - [9. Define encapsulation](#9-define-encapsulation)
+    - [10. Define inheritance](#10-define-inheritance)
+    - [11. Define polymorphism](#11-define-polymorphism)
+    - [12. Define stack](#12-define-stack)
+    - [13. Define heap](#13-define-heap)
+    - [14. Define garbage collection](#14-define-garbage-collection)
+    - [15. Define constructor](#15-define-constructor)
+    - [16. Compare class methods and class members](#16-compare-class-methods-and-class-members)
+    - [17. Define package](#17-define-package)
+    - [18. Compare final classes and abstract classes](#18-compare-final-classes-and-abstract-classes)
+    - [19. Define exceptions](#19-define-exceptions)
       - [Checked exception](#checked-exception)
       - [Unchecked exception](#unchecked-exception)
       - [Error](#error)
-    - [**20. Write down the methods of handling exceptions**](#20-write-down-the-methods-of-handling-exceptions)
-    - [**21. Define interface**](#21-define-interface)
-    - [**22. Compare interfaces and abstract classes**](#22-compare-interfaces-and-abstract-classes)
+    - [20. Write down the methods of handling exceptions](#20-write-down-the-methods-of-handling-exceptions)
+    - [21. Define interface](#21-define-interface)
+    - [22. Compare interfaces and abstract classes](#22-compare-interfaces-and-abstract-classes)
       - [Summary](#summary)
       - [Alternative summary](#alternative-summary)
-    - [**23. Compare public and protected modificators**](#23-compare-public-and-protected-modificators)
+    - [23. Compare public and protected modificators](#23-compare-public-and-protected-modificators)
       - [Public](#public)
       - [Protected](#protected)
       - [Default](#default)
       - [Private](#private)
-    - [**24. Compare public and default modificators**](#24-compare-public-and-default-modificators)
-    - [**25. Compare stack and heap**](#25-compare-stack-and-heap)
-    - [**26. Compare FileWriter and BufferedWriter classes**](#26-compare-filewriter-and-bufferedwriter-classes)
-    - [**27. Define the thread scheduler**](#27-define-the-thread-scheduler)
-    - [**28. Write down the dangers of working with threads**](#28-write-down-the-dangers-of-working-with-threads)
+    - [24. Compare public and default modificators](#24-compare-public-and-default-modificators)
+    - [25. Compare stack and heap](#25-compare-stack-and-heap)
+    - [26. Compare FileWriter and BufferedWriter classes](#26-compare-filewriter-and-bufferedwriter-classes)
+    - [27. Define the thread scheduler](#27-define-the-thread-scheduler)
+    - [28. Write down the dangers of working with threads](#28-write-down-the-dangers-of-working-with-threads)
 
 ### **1. Define JVM (Java Virtual Machine)**
 
@@ -62,11 +62,11 @@ If primitives were atoms, - objects would have been molecules. Primitive types r
 
 Local primitives are stored on the stack, while objects alongside their own primitives are stored on the heap.
 
-### **5. Explain why Java is regarded as multiplatform language**
+### **5. Explain why Java is regarded as cross-platform language**
 
 Java is cross platform in the sense that a compiled Java program runs on all platforms for which there exists a JVM.
 
-Java compilation can also be done on multiple paltforms, which makes Java inherently multiplatform.
+Java compilation can also be done on multiple platforms, which makes Java inherently cross-platform.
 
 ### **6. Define thread**
 
@@ -80,7 +80,7 @@ One is to declare a class to be a subclass of Thread. This subclass should overr
 
 The other way to create a thread is to declare a class that implements the Runnable interface. That class then implements the run method. An instance of the class can then be allocated, passed as an argument when creating Thread, and started.
 
-### **8. Define the lifecycle of a thread**
+### **8. Define the life cycle of a thread**
 
 - New - a new thread is created.
 - Runnable - the thread is ready to be run.
@@ -128,7 +128,7 @@ A Java virtual machine implementation may provide the programmer or the user con
 
 In Java, garbage means unreferenced objects.
 
-Garbage Collection is the process of reclaiming the runtime's unused memory automatically. In other words, it is a way to destroy the unreferenced objects.
+Garbage Collection is the process of reclaiming the unused memory of the runtime automatically. In other words, it is a way to destroy the unreferenced objects.
 
 ### **15. Define constructor**
 
@@ -201,9 +201,9 @@ Unless the class that implements the interface is abstract, all the methods of t
 Public, protected, default, private in sequence.
 
 | Class | Package | Subclass | Anywhere |
-| :---: |:-------:| :-------:| :------: |
-|   +   |    +    |     +    |    +     |
-|   +   |    +    |     +    |          |
+| :---: | :-----: | :------: | :------: |
+|   +   |    +    |    +     |    +     |
+|   +   |    +    |    +     |          |
 |   +   |    +    |          |          |
 |   +   |         |          |          |
 
@@ -242,7 +242,7 @@ For unbuffered I/O stream, each read or write request is handled directly by the
 
 ### **27. Define the thread scheduler**
 
-Thread scheduler in java is the part of the JVM that decides which thread should run. There is no guarantee that which runnable thread will be chosen to run by the thread scheduler. Only one thread at a time can run in a single process. The thread scheduler mainly uses preemptive or time slicing scheduling to schedule the threads.
+Thread scheduler in Java is the part of the JVM that decides which thread should run. There is no guarantee that which runnable thread will be chosen to run by the thread scheduler. Only one thread at a time can run in a single process. The thread scheduler mainly uses preemptive or time slicing scheduling to schedule the threads.
 
 ### **28. Write down the dangers of working with threads**
 
