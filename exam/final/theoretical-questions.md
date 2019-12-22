@@ -375,8 +375,10 @@ JDBC (Java Database Connectivity) is the Java API that manages connecting to a d
 
 ```mermaid
 graph TD;
-    A(Java project)---C(JDBC API)---E(JDBC);
-    B(Database)---D(JDBC Driver)---E(JDBC);
+    A(Java project)---C(JDBC API);
+    C---E(JDBC);
+    B(Database)---D(JDBC Driver);
+    D---E(JDBC);
     E-->F(Connection);
     F-->G(Statement);
     G-->I(ResultSet);
