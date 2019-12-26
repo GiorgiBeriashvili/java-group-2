@@ -13,6 +13,8 @@ public class Utils {
         calculator.calculate("2*(2+32)");
         calculator.calculate("3+7^2*3/(43-12)");
 
+        System.out.println();
+
         Cosmos cosmos = new Cosmos();
         cosmos.initialize();
     }

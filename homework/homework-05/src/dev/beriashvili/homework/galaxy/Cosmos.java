@@ -226,7 +226,7 @@ public class Cosmos {
 
     void storeData() {
         File directory = Utils.getDirectory("data");
-        final File file = new File(String.format("%s/%s", directory.getPath(), "data.txt"));
+        final File file = new File(String.format("%s/%s", directory.getPath(), String.format("%s.txt", galaxy.name)));
 
         try {
             BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file, true));
